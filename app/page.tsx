@@ -113,15 +113,16 @@ export default function Home() {
           </motion.div>
 
           <motion.h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 leading-tight">
-            Transform Your Digital <br className="hidden md:block" />
+            Strategy Design <br className="hidden md:block" />
             <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-              Presence
+              Technology
             </span>
           </motion.h1>
 
           <motion.p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            We combine strategic thinking with cutting-edge design to create
-            digital experiences that drive business growth
+            Crafting brands and beautiful digital experiences We combine
+            strategic thinking with cutting-edge design to create digital
+            experiences that drive business growth
           </motion.p>
 
           <motion.div className="flex flex-col md:flex-row items-center justify-center gap-4">
@@ -129,7 +130,7 @@ export default function Home() {
               size="lg"
               className="px-8 shadow-lg hover:shadow-primary/20"
             >
-              Start Project
+              LET'S TALK
             </Button>
             <Button
               size="lg"
@@ -319,6 +320,74 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our work</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              We're good at these areas to work
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "TRISTANCE BANCE",
+                role: "UI/UX Design Frontend Design",
+                image: "/Screenshot 2025-02-22 122208.png",
+              },
+              {
+                name: "Mr Vase",
+                role: "UI/UX Design Frontend Design",
+                image: "/Screenshot 2025-02-22 122226.png",
+              },
+              {
+                name: "Alpha Blossom",
+                role: "UI/UX Design Frontend Design ",
+                image: "/Screenshot 2025-02-22 122245.png",
+              },
+              {
+                name: "Employee Link",
+                role: "UI/UX Design Frontend Design ",
+                image: "/Screenshot 2025-02-22 122302.png",
+              },
+              {
+                name: "TRISTANCE BANCE",
+                role: "UI/UX Design Frontend Design",
+                image: "/Screenshot 2025-02-22 122208.png",
+              },
+              {
+                name: "Carlos v Spencer",
+                role: "UI/UX Design Frontend Design ",
+                image: "/Screenshot 2025-02-22 122336.png",
+              },
+            ].map((member, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.02 }}
+                className="bg-background rounded-xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                  <p className="text-muted-foreground">{member.role}</p>
+                  <div className="flex gap-3 mt-4">
+                    <Button variant="outline" size="sm">
+                      View Profile
+                    </Button>
+                    <Button size="sm">Contact</Button>
+                  </div>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
